@@ -19,6 +19,9 @@ describe("#removeUser", function() {
   let users;
   beforeEach(function(){
       users = [
+        { username: "kevin" },
+        { username: "michael" },
+        { username: "bob" },
         { username: "mlewis" },
         { username: "akagen" },
         { username: "msmith" }
@@ -26,7 +29,7 @@ describe("#removeUser", function() {
   })
   it("removes a user from an array", function() {
     removeUser(users, "mlewis");
-    expect(users.length).toEqual(2)
+    expect(users.length).toEqual(5)
     
   });
   it("returns the removed user", function() {
@@ -34,7 +37,7 @@ describe("#removeUser", function() {
   });
   it("returns undefined a user from an array", function() {
     expect(removeUser(users, "taco")).toEqual(undefined);
-    expect(users.length).toEqual(3);
+    expect(users.length).toEqual(6);
 
   });
 });

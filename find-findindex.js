@@ -36,7 +36,10 @@ function removeUser(usersArray, username) {
   const userDel = usersArray.findIndex(function(users){
     return users.username === username;
   })
-  if(userDel === -1) return;
+  if(userDel === -1) return undefined;
 
+  // return usersArray[userDel];
+  console.table(`usersArray; ${usersArray}`)
+  // console.log(usersArray.splice(userDel,1)[0])
   return usersArray.splice(userDel,1)[0];
 }
